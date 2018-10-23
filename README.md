@@ -21,4 +21,4 @@ I'll be grateful if you tweet me about it at [@alfred_lua](https://twitter.com/a
 
 ## Acknowledgement
 
-Benjamin Cunningham's blog post, [Testing JavaScript with Jasmine — Basics](https://medium.com/letsboot/testing-javascript-with-jasmine-basics-48efe03cf973), helped me get unstuck for a few times.
+Benjamin Cunningham's blog post, [Testing JavaScript with Jasmine — Basics](https://medium.com/letsboot/testing-javascript-with-jasmine-basics-48efe03cf973), helped me get unstuck a few times.
