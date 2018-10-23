@@ -121,12 +121,12 @@ $(function() {
             feedNew;
 
         beforeEach(function(done) {
-            loadFeed(1, function() {
-                feedCurrent = $('.feed');
-                loadFeed(0, function() {
-                    feedNew = $('.feed');
-                    done();
+            loadFeed(0, function() {
+                feedCurrent = $('.feed').html();
+                loadFeed(1, function() {
+                    feedNew = $('.feed').html();
                 });
+                done();
             });
         });
 
