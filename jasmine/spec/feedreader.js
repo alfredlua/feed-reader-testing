@@ -132,7 +132,7 @@ $(function() {
 
 
         it('is loaded', function(done) {
-            expect(feedNew).not.toBe(feedCurrent);
+            expect(feedNew === feedCurrent).toBe(false);
             done();
         });
 
