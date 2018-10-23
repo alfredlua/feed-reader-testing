@@ -1,6 +1,6 @@
 # Feed Reader
 
-A Feed Reader for four blogs
+A feed reader for four blogs
 
 ![screenshot](images/screenshot.png)
 
