@@ -37,7 +37,6 @@ $(function() {
         it('have URL defined', function() {
             var feed;
             for (feed of allFeeds) {
-                expect(feed.url).toBeDefined();
                 expect(feed.url).not.toBe('');
             }
          });
@@ -51,7 +50,6 @@ $(function() {
         it('have name defined', function() {
             var feed;
             for (feed of allFeeds) {
-                expect(feed.name).toBeDefined();
                 expect(feed.name).not.toBe('');
             }
          });
