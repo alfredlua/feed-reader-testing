@@ -123,11 +123,11 @@ $(function() {
             feedNew;
 
         beforeEach(function(done) {
-            loadFeed(0, function() {
+            loadFeed(1, function() {
                 feedCurrent = $('.feed');
                 done();
             });
-            loadFeed(1, function() {
+            loadFeed(0, function() {
                 feedNew = $('.feed');
                 done();
             });
