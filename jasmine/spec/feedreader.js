@@ -125,11 +125,10 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(1, function() {
                 feedCurrent = $('.feed');
-                done();
-            });
-            loadFeed(0, function() {
-                feedNew = $('.feed');
-                done();
+                loadFeed(0, function() {
+                    feedNew = $('.feed');
+                    done();
+                });
             });
         });
 
