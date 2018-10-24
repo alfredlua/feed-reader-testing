@@ -35,9 +35,8 @@ $(function() {
          */
 
         it('have URL defined', function() {
-            var feed;
-            for (feed of allFeeds) {
-                expect(feed.url).not.toBe('');
+            for (let feed of allFeeds) {
+                expect(feed.url).not.toBeGreaterThan(0);
             }
          });
 
