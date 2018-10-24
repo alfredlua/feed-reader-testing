@@ -6,9 +6,10 @@ A feed reader for four blogs
 
 ## How to use the Feed Reader
 
-1. Load the reader by opening the index.html file in a browser
-2. Click on the hamburger menu icon to select another blog
-3. Click on any title to read the blog post
+1. Clone the repo by typing `git clone https://github.com/alfredlua/feed-reader-testing.git` in your terminal
+2. Load the reader by opening the index.html file in a browser
+3. Click on the hamburger menu icon to select another blog
+4. Click on any title to read the blog post
 
 ## Dependencies
 
