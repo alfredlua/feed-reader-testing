@@ -123,8 +123,8 @@ $(function() {
                 feedCurrent = $('.feed').html();
                 loadFeed(1, function() {
                     feedNew = $('.feed').html();
+                    done();
                 });
-                done();
             });
         });
 
