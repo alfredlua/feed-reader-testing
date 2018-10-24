@@ -15,7 +15,7 @@ $(function() {
     * a related set of tests. This suite is all about the RSS
     * feeds definitions, the allFeeds variable in our application.
     */
-    describe('RSS Feeds', function() {
+    describe('RSS Feeds', () => {
         /* This is our first test - it tests to make sure that the
          * allFeeds variable has been defined and that it is not
          * empty. Experiment with this before you get started on
@@ -23,7 +23,7 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
-        it('are defined', function() {
+        it('are defined', () => {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
@@ -34,7 +34,7 @@ $(function() {
          * and that the URL is not empty.
          */
 
-        it('have URL defined', function() {
+        it('have URL defined', () => {
             for (let feed of allFeeds) {
                 expect(feed.url).not.toBeGreaterThan(0);
             }
@@ -46,7 +46,7 @@ $(function() {
          * and that the name is not empty.
          */
 
-        it('have name defined', function() {
+        it('have name defined', () => {
             for (let feed of allFeeds) {
                 expect(feed.name).not.toBeGreaterThan(0);
             }
@@ -56,7 +56,7 @@ $(function() {
 
     /* A new test suite named "The menu" */
 
-    describe('The menu', function() {
+    describe('The menu', () => {
 
         /* A test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
@@ -64,7 +64,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
 
-        it('is hidden by default', function() {
+        it('is hidden by default', () => {
             expect($('body').hasClass('menu-hidden')).toBe(true);
          });
 
@@ -74,7 +74,7 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
-        it('is displayed when clicked and hidden when clicked again', function() {
+        it('is displayed when clicked and hidden when clicked again', () => {
             $('.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toBe(false);
             $('.menu-icon-link').click();
@@ -85,7 +85,7 @@ $(function() {
 
     /* A new test suite named "Initial Entries" */
 
-    describe('Initial Entries', function() {
+    describe('Initial Entries', () => {
 
         /* A test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -94,13 +94,13 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
-        beforeEach(function(done) {
-            loadFeed(0, function() {
+        beforeEach((done) => {
+            loadFeed(0, () => {
                 done();
             });
         });
 
-         it('are present', function(done) {
+         it('are present', (done) => {
             expect($('.feed').find('article.entry').length).toBeGreaterThan(0);
             done();
          });
@@ -108,7 +108,7 @@ $(function() {
 
     /* A new test suite named "New Feed Selection" */
 
-    describe('New Feed Selection', function() {
+    describe('New Feed Selection', () => {
 
         /* A test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
@@ -118,10 +118,10 @@ $(function() {
         var feedCurrent,
             feedNew;
 
-        beforeEach(function(done) {
-            loadFeed(0, function() {
+        beforeEach((done) => {
+            loadFeed(0, () => {
                 feedCurrent = $('.feed').html();
-                loadFeed(1, function() {
+                loadFeed(1, () => {
                     feedNew = $('.feed').html();
                     done();
                 });
@@ -129,7 +129,7 @@ $(function() {
         });
 
 
-        it('is loaded', function(done) {
+        it('is loaded', (done) => {
             expect(feedNew === feedCurrent).toBe(false);
             done();
         });
